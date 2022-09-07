@@ -4,19 +4,12 @@ import com.example.application.infrastructure.security.SecurityService;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H1;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.HighlightConditions;
-import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
-import com.vaadin.flow.theme.Theme;
-
-import javax.swing.text.html.ListView;
 
 public class MainLayout extends AppLayout {
     private final SecurityService securityService;
@@ -47,8 +40,11 @@ public class MainLayout extends AppLayout {
     private void createDrawer() {
         RouterLink aboutLink = new RouterLink("About", AboutView.class);
         aboutLink.setHighlightCondition(HighlightConditions.sameLocation());
-        RouterLink contactLink = new RouterLink("Contact", ContactView.class);
+        RouterLink contactLink = new RouterLink("Contact", UserCrudView.class);
         contactLink.setHighlightCondition(HighlightConditions.sameLocation());
-        addToDrawer(new VerticalLayout(aboutLink, contactLink));
+
+        RouterLink videosLink = new RouterLink("Videos", VideoSetCrudView.class);
+        videosLink.setHighlightCondition(HighlightConditions.sameLocation());
+        addToDrawer(new VerticalLayout(aboutLink, contactLink, videosLink));
     }
 }

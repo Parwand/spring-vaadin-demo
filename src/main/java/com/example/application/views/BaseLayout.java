@@ -1,7 +1,6 @@
 package com.example.application.views;
 
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -11,9 +10,9 @@ import com.vaadin.flow.router.Route;
 
 @PageTitle("Home Page")
 @Route(value = "/", layout = MainLayout.class)
-public class PrintLayout extends VerticalLayout {
+public class BaseLayout extends VerticalLayout {
 
-    public PrintLayout() {
+    public BaseLayout() {
         TextField textField = new TextField();
         textField.setPlaceholder("Put your name.. ");
         Button button = new Button("send");
