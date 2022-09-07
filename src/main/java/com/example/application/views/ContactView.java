@@ -8,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "/contact")
+@Route(value = "/contact", layout = MainLayout.class)
 @PageTitle("Contact")
 public class ContactView extends VerticalLayout {
     PersonService personService;

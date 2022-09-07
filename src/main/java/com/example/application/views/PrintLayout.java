@@ -10,7 +10,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Home Page")
-@Route(value = "/print")
+@Route(value = "/", layout = MainLayout.class)
 public class PrintLayout extends VerticalLayout {
 
     public PrintLayout() {
@@ -22,14 +22,7 @@ public class PrintLayout extends VerticalLayout {
         HorizontalLayout horizontalLayout = new HorizontalLayout();
         horizontalLayout.add(textField, button);
         horizontalLayout.setDefaultVerticalComponentAlignment(Alignment.BASELINE);
-        Anchor anchor = new Anchor();
-        Anchor contactAnchor = new Anchor();
-        anchor.setHref("about");
-        anchor.setText("About");
-        anchor.setTarget("_blanker");
-        contactAnchor.setHref("contact");
-        contactAnchor.setText("contact");
 
-        add(horizontalLayout, anchor, contactAnchor);
+        add(horizontalLayout);
     }
 }
