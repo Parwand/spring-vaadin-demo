@@ -8,11 +8,11 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("Home Page")
-@Route(value = "/", layout = MainLayout.class)
-public class BaseLayout extends VerticalLayout {
+@PageTitle("Print Page")
+@Route(value = "/print", layout = MainLayout.class)
+public class PrintLayout extends VerticalLayout {
 
-    public BaseLayout() {
+    public PrintLayout() {
         TextField textField = new TextField();
         textField.setPlaceholder("Put your name.. ");
         Button button = new Button("send");

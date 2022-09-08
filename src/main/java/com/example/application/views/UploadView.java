@@ -15,7 +15,7 @@ public class UploadView extends VerticalLayout {
     H1 h1 = new H1("Video Upload");
 
 
-    public UploadView(Uploa) {
+    public UploadView() {
         add(h1);
         /* Example for MemoryBuffer */
         MemoryBuffer memoryBuffer = new MemoryBuffer();

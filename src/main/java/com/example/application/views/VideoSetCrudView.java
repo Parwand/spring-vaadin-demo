@@ -19,7 +19,7 @@ import com.vaadin.flow.router.Route;
 
 import java.util.Date;
 
-@Route(value = "/videos", layout = MainLayout.class)
+@Route(value = "/", layout = MainLayout.class)
 @PageTitle("Contact")
 public class VideoSetCrudView extends VerticalLayout {
     public static final String VIEW_NAME = "VideoSetCrud";
